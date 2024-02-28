@@ -9,7 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const Body = () => {
     return ( 
-        <div className="bg-gray-400 border-4 border-violet-600 text-white flex w-full justify-center items-center h-full lg:col-span-4">
+        <div className="bg-pallete-200 overflow-y-auto text-pallete-400  flex w-full justify-center items-center min-h-full lg:col-span-4">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/my-projects" element={<Projects />} />

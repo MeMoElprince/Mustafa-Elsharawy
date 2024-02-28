@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.active{
+    color: #F6B17A;
+    transition: color 0.5s;
+}
+
+.slider{
+    z-index: 1;
+}
+
+.spinner{
+    animation: scroll 8s linear infinite;
+  }
+
+.spinner:hover{
+animation-play-state: paused;
+}
+
+@keyframes scroll {
+0%{
+    transform: translateX(calc(-100%/2));
+}
+
+100%{
+    transform: translateX(0);
+}
+}
