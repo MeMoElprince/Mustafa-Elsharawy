@@ -9,8 +9,8 @@ const Contant = () => {
         iconSize: [50, 50]
     })
   return (
-    <div className="contact h-full w-full grid gap-4 grid-cols-1 lg:grid-cols-2 p-16 place-content-center  ">
-      <div className="flex flex-col flex-wrap justify-center gap-6 items-center p-4  h-[70vh] rounded-3xl overflow-hidden font-bold">
+    <div className="contact h-full w-full grid gap-4 grid-cols-1 lg:grid-cols-2 p-8 place-content-center  ">
+      <div className="flex flex-col flex-wrap justify-center gap-6 items-center p-4  h-fit rounded-3xl overflow-hidden font-bold">
             <h1 className="shadow-md shadow-pallete-400 bg-pallete-100 text-2xl min-w-32 sm:text-3xl xl:text-4xl rounded-3xl w-full sm:w-2/4  lg:w-3/4 h-24  flex-wrap text-center justify-center flex items-center">
                 Message 
             </h1>
