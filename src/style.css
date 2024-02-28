@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 .active{
     color: #F6B17A;
     transition: color 0.5s;
