@@ -29,3 +29,76 @@ animation-play-state: paused;
     transform: translateX(0);
 }
 }
+
+/* HTML: <div class="loader"></div> */
+
+  
+  /* SMOKE */
+  #smoke-1 {
+    stroke-dasharray: 0, 10;
+    animation: smoke 6s ease infinite;
+  }
+  
+  #smoke-2 {
+    stroke-dasharray: 0, 10;
+    animation: smoke 6s 0.5s ease infinite;
+  }
+  
+  @keyframes smoke {
+    0% { stroke-dasharray: 0, 10; }
+    50% { stroke-dasharray: 10, 0; }
+    100% { stroke-dasharray: 10, 0; opacity: 0; }
+  }
+  
+  /* WRITING */
+  #line-1 {
+    opacity: 0;
+    animation: writing 1s linear forwards infinite;
+  }
+  
+  #line-2 {
+    opacity: 0;
+    animation: writing .8s 1.5s linear forwards infinite;
+  }
+  
+  #line-3 {
+    opacity: 0;
+    animation: writing 1.1s 1.2s linear forwards infinite;
+  }
+  
+  #line-4 {
+    opacity: 0;
+    animation: writing 1s 1.5s linear forwards infinite;
+  }
+  
+  @keyframes writing {
+    0% { width: 0px; opacity: 1;}
+    100% { width: 14px; opacity: 1;}
+  }
+  
+
+
+  /* HTML: <div class="loader"></div> */
+.loader {
+    aspect-ratio: 1;
+    color:#dc1818;
+    background:
+     radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
+     radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+     linear-gradient(to bottom left, currentColor 42%,#0000 43%) bottom left ,
+     linear-gradient(to bottom right,currentColor 42%,#0000 43%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: l3 1s infinite;
+  }
+  @keyframes l3 {
+    to {transform:scale(1.8);opacity:0}
+  }

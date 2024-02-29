@@ -25,7 +25,6 @@ const Contant = () => {
             className="full-height-map h-full w-full rounded-3xl"
             center={[31.146915, 33.834611]}
             zoom={13}
-            minZoom={3}
             maxZoom={19}
             maxBounds={[
             [-85.06, -180],
