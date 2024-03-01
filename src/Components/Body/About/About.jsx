@@ -1,7 +1,15 @@
 import AnimationLogo from "./AnimationLogo";
 import AnimationOffice from "./AnimationOffice";
+import { useEffect } from "react";
 
-const About = () => {
+const About = ({prev}) => {
+
+  useEffect(() => {
+        
+      prev(2);
+
+  }, []);
+
   return (
     <div className="about flex flex-col h-full w-full p-4 gap-24">
       <div className="grid lg:grid-cols-2 w-full place-content-center gap-10 px-10 h-fit mt-10 ">

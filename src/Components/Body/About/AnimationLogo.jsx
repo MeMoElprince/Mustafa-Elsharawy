@@ -14,7 +14,7 @@ const AnimationLogo = () => {
         animate={{boxShadow: ["none","0 0 80px 8px " + color, "none"]}}
         transition={{duration: 7, repeat: Infinity}}
     >
-        <motion.div className='child lg:h-72  h-52 w-52  text-center rounded-full z--10 lg:w-72 dark:bg-pallete-600 bg-pallete2-600 flex justify-center items-center text-2xl font-bold'
+        <motion.div className='child lg:h-72  h-52 w-52  text-center rounded-full z--10 lg:w-72 dark:bg-pallete-100 bg-pallete2-600 flex justify-center items-center text-2xl font-bold'
             initial={{x: 0, y: 0}}
             animate={{x: [15, -15], y: [-15, 15]}}
             transition={{duration: 5, repeat: Infinity, repeatType: 'reverse'}}

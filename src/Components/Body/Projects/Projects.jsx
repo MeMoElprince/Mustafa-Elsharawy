@@ -2,8 +2,12 @@ import ProjectCard from "./ProjectCard";
 
 import img1 from '../../../Imgs/project1.png'
 import natours from '../../../Imgs/Natours.png'
+import { useEffect } from "react";
 
-const Projects = () => {
+const Projects = ({prev}) => {
+    useEffect(() => {
+        prev(3);
+    }, []);
     return ( 
 
         <div className="projects flex flex-col gap-10 w-full h-full ">

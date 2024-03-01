@@ -1,9 +1,14 @@
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon  } from "leaflet";
+import { useEffect } from "react";
 
+const Contant = ({prev}) => {
 
-const Contant = () => {
+    useEffect(() => {
+        prev(4);
+    });
+
     const icon = new Icon({
         iconUrl: "https://cdn-icons-png.flaticon.com/512/927/927667.png",
         iconSize: [50, 50]

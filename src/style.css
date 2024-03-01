@@ -12,6 +12,10 @@
 }
 
 
+/* .clamp{
+  font-size: clamp(3rem, 100%, 4rem);
+} */
+
 .slider{
     z-index: 1;
 }

@@ -1,7 +1,7 @@
 const Button = ({text}) => {
   return (
     <button
-      class='
+      className='
         relative z-0 flex items-center justify-center gap-2 overflow-hidden rounded-lg border-[1px] 
         dark:border-pallete-100 border-pallete2-100  py-2 px-4 font-semibold
         dark:text-pallete-500 text-pallete2-500 transition-all duration-500
@@ -24,10 +24,10 @@ const Button = ({text}) => {
       <svg
         stroke="currentColor"
         fill="none"
-        stroke-width="2"
+        strokeWidth="2"
         viewBox="0 0 24 24"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         height="1.5rem"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
