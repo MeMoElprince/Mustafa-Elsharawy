@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => {
     return ( 
@@ -21,8 +22,18 @@ const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => 
                     </div>
                     {discreption && <p className="text-center">{discreption}</p>}
                     <div className="projectCard-info-links flex gap-5 justify-center items-center ">
-                        {live && <Button text={'Live'}/>}
-                        {repo && <Button text={'Repo'}/>}
+                        {
+                            live && 
+                            <Link to={live} target='_blank'>
+                                <Button text={'Live'}/>
+                            </Link>
+                        }
+                        {
+                            repo && 
+                            <Link to={repo} target='_blank'>
+                                <Button text={'Repo'}/>
+                            </Link>
+                        }
                     </div>
                 </div>
             </div>
