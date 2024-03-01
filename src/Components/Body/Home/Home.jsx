@@ -7,6 +7,7 @@ const Home = ({prev}) => {
     
     // const location = useLocation();
     // const [prevLocation, setPrevLocation] = useState(location.pathname.split('/')[1]);
+
     
     useEffect(() => {
         
@@ -15,7 +16,7 @@ const Home = ({prev}) => {
     }, []);
 
     return ( 
-        <div className="home grid  h-fit">
+        <div className="home flex flex-col pb-6  h-full">
             <div className="grid place-items-center justify-center md:grid-cols-2 p-5 md:p-10 h-full md:gap-3 gap-6" >
                 <div className="px-10 order-2 gap-2 flex flex-col justify-center items-center md:order-1 text-center">
                     <div className="">
