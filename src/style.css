@@ -4,7 +4,7 @@
 
 
 .active{
-  @apply text-pallete2-400 dark:text-pallete-400;
+  @apply text-pallete2-400 dark:text-pallete-400 pointer-events-none;
 }
 
 *{

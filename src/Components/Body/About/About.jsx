@@ -11,7 +11,7 @@ const About = ({prev}) => {
   }, []);
 
   return (
-    <div className="about flex flex-col h-full w-full p-4 gap-24">
+    <div className="about flex flex-col h-full w-full p-4 gap-24 lg:gap-0 ">
       <div className="grid lg:grid-cols-2 w-full place-content-center gap-10 px-10 h-fit mt-10 ">
         <div className="justify-self-center  flex flex-col gap-5 justify-center items-start lg:items-start w-fit p-4">
           <h1 className="text-5xl w-full font-bold mb-4 text-center lg:text-start">My, Self</h1>

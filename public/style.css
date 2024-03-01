@@ -869,6 +869,10 @@ video {
   gap: 2rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1087,6 +1091,11 @@ video {
   color: rgb(6 20 27 / var(--tw-text-opacity));
 }
 
+.text-pallete-700 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1122,6 +1131,7 @@ video {
 }
 
 .active {
+  pointer-events: none;
   --tw-text-opacity: 1;
   color: rgb(204 208 207 / var(--tw-text-opacity));
 }
@@ -1597,6 +1607,10 @@ video {
 
   .lg\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 
   .lg\:gap-x-2 {

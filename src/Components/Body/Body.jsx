@@ -34,19 +34,23 @@ const Layout = ({ children, prev, current }) => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: .8,
       }
-    },
-    exit: {
-      y: '100%',
-      opacity: 0,
-    },
+    }
   };
 
   const variantUp = {
-    initial: {},
-    animate: {},
-    exit: {},
+    initial: {
+      y: '-100%',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: .8,
+      }
+    }
   };
 
   const variantStop = {
@@ -56,28 +60,35 @@ const Layout = ({ children, prev, current }) => {
     animate: {
       opacity: 1,
       transition: {
-        duration: 2,
-      },
-    },
-    exit: {
-      opacity: 0,
+        duration: .5,
+      }
     },
   };
 
   
   return (
     <motion.div
+
+      key={current}
       className="w-full h-full"
       variants={
         animationType === -1
-          ? variantDown
+          ? variantUp
           : animationType === 1
           ? variantDown
-          : variantDown
+          : variantStop
       }
       initial="initial"
       animate="animate"
-      exit="exit"
+      
+    exit={{
+      opacity: 0,
+      transition: {
+        duration: .5,
+      }
+    }}
+      
+      
     >
       {children}
     </motion.div>
@@ -86,11 +97,12 @@ const Layout = ({ children, prev, current }) => {
 
 const Body = () => {
   const [prev, setPrev] = useState(null);
-
+  const location = useLocation();
   return (
-    <div className="dark:bg-pallete-200 bg-pallete2-200 overflow-y-auto dark:text-pallete-400 text-pallete2-400 flex w-full justify-center items-center min-h-full lg:col-span-4">
-      <AnimatePresence>
-        <Routes>
+    <div 
+    className="dark:bg-pallete-200 bg-pallete2-200 overflow-y-auto dark:text-pallete-400 text-pallete2-400 flex w-full justify-center items-center min-h-full lg:col-span-4">
+      <AnimatePresence mode="wait"  >
+        <Routes location={location} key={location.pathname}>
           <Route
             path="/"
             element={

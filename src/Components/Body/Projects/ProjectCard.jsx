@@ -14,7 +14,7 @@ const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => 
                     <div className="projectCard-title dark:bg-pallete-200 bg-pallete2-200 min-w-40  text-5xl dark:text-pallete-400 text-pallete2-400 font-bold rounded-xl w-fit my-1">
                         {title && <h1>{title}</h1>}
                     </div>
-                    <div className="dark:text-pallete-700 text-pallete2-700 rounded-2xl projectCard-info-tech">
+                    <div className="text-pallete-700 font-bold  rounded-2xl projectCard-info-tech">
                     {   tech && 
                             <p>{tech}</p>
                     }
