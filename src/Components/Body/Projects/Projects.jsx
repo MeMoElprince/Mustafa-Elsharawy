@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-import img1 from '../../../Imgs/project1.png'
+import selenium from '../../../Imgs/selenium.png'
 import natours from '../../../Imgs/Natours.png'
 import { useEffect } from "react";
 
@@ -22,7 +22,7 @@ const Projects = ({prev}) => {
 
             <div className="h-fit w-full flex flex-col gap-32 justify-center items-center pb-10">
                 <ProjectCard title={"Natours"} discreption={"A full-stack project for a fictional tour booking company called Natours.A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens."} img={natours} tech={"NodeJs, Express, MongoDB, PUG template"} repo={"https://github.com/MeMoElprince/My-Natours-Project"} live={"https://natours-memo.onrender.com/"} />
-                <ProjectCard title={"Project1"} discreption={"Shop.co is a modern e-commerce website it's a real online shop! You can browse different items in different colors and sizes. and Added them to cart"} img={img1} tech={"React, NodeJs"} repo={"repo"} live={"live"} />
+                <ProjectCard title={"Codeforces-User-Submitions"} discreption={"Codeforces Website Script for ICPC-SuezCanal-Community: Tracking Trainee Submissions"} img={selenium} tech={"Python, Selenium, Web Scrapping"} repo={"https://github.com/MeMoElprince/Codeforces-User-Submissions"} />
             </div>
         </div>
         

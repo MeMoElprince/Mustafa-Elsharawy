@@ -21,8 +21,8 @@ const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => 
                     </div>
                     {discreption && <p className="text-center">{discreption}</p>}
                     <div className="projectCard-info-links flex gap-5 justify-center items-center ">
-                        <Button text={'Live'}/>
-                        <Button text={'Repo'}/>
+                        {live && <Button text={'Live'}/>}
+                        {repo && <Button text={'Repo'}/>}
                     </div>
                 </div>
             </div>
