@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import img from '../../Imgs/photo.jpg';
+import img from '../../Imgs/me.jpeg';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useState} from 'react';
 import Items from './Items';
@@ -20,7 +20,7 @@ const Navbar = () => {
                
             <div className=" mxs:justify-around h-fit w-full flex justify-between lg:justify-center lg:gap-3 items-center flex-wrap lg:py-6 lg:flex-col">
                 <NavLink className=' h-fit p-2 flex justify-center  items-center 'to="/">
-                        <img className="mxs:w-24 mxs:h-24 h-32 w-32  rounded-full" src={img} alt="" />
+                        <img className="mxs:w-24 mxs:h-24 h-32 w-32 object-cover rounded-full" src={img} alt="" />
                 </NavLink>
                 <h1 className='mxs:hidden dark:text-pallete-400 text-pallete2-400 text-4xl font-bold lg:text-3xl  text-center'> Full Stack Developer  </h1>
                 <div onClick={handleClick} className='w-fit flex items-center cursor-pointer lg:hidden'>
