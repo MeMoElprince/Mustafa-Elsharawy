@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => {
     return ( 
-        <div className={"mx-8 pb-1 w-fit  projectCard text-pallete-500 text-xl flex flex-col gap-1  justify-center items-center text-center   rounded-3xl  h-fit " + className}>
+        <div className={"mx-8 pb-1 w-fit  projectCard dark:text-pallete-500 text-pallete2-500 text-xl flex flex-col gap-1  justify-center items-center text-center   rounded-3xl  h-fit " + className}>
             <div className="text-3xl flex lg:gap-x-2 xl:gap-x-8 2xl:gap-x-16 flex-wrap justify-center  items-center sm:px-2 px-1">
                 {
                     img &&
@@ -10,11 +10,11 @@ const ProjectCard = ({img, title, discreption, tech, live, repo, className}) => 
                         <img className="h-full w-full rounded-3xl" src={img} alt="pic" />
                     </div>
                 }
-                <div className="border-b-4 pb-4 rounded-3xl border-pallete-400 flex flex-col justify-center items-center  text-center gap-8 lg:max-w-100 lg:w-100 p-2">
-                    <div className="projectCard-title bg-pallete-200 min-w-40  text-5xl text-pallete-400 font-bold rounded-xl w-fit my-1">
+                <div className="border-b-4 pb-4 rounded-3xl dark:border-pallete-400 border-pallete2-400 flex flex-col justify-center items-center  text-center gap-8 lg:max-w-100 lg:w-100 p-2">
+                    <div className="projectCard-title dark:bg-pallete-200 bg-pallete2-200 min-w-40  text-5xl dark:text-pallete-400 text-pallete2-400 font-bold rounded-xl w-fit my-1">
                         {title && <h1>{title}</h1>}
                     </div>
-                    <div className="text-pallete-700 rounded-2xl projectCard-info-tech">
+                    <div className="dark:text-pallete-700 text-pallete2-700 rounded-2xl projectCard-info-tech">
                     {   tech && 
                             <p>{tech}</p>
                     }

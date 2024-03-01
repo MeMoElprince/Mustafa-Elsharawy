@@ -1,7 +1,7 @@
 
 const Slider = ({className}) => {
     return ( 
-        <div className={'slider w-auto relative overflow-hidden flex mx-10  shadow-md shadow-pallete-400 py-2 ' + className}>
+        <div className={'slider w-auto relative overflow-hidden flex mx-10  dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400 py-2 ' + className}>
             <div className="w-fit h-fit justify-center items-center flex gap-2 spinner ">
                 <div className='h-14 w-20'>
                     <img className="w-full h-full z-0" src="https://skillicons.dev/icons?i=git" alt="git" />

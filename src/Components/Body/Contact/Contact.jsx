@@ -11,16 +11,16 @@ const Contant = () => {
   return (
     <div className="contact h-full w-full grid gap-4 grid-cols-1 lg:grid-cols-2 p-8 place-content-center  ">
       <div className="flex flex-col flex-wrap justify-center gap-6 items-center p-4  h-fit rounded-3xl overflow-hidden font-bold">
-            <h1 className="shadow-md shadow-pallete-400 bg-pallete-100 text-2xl min-w-32 sm:text-3xl xl:text-4xl rounded-3xl w-full sm:w-2/4  lg:w-3/4 h-24  flex-wrap text-center justify-center flex items-center">
+            <h1 className="shadow-md dark:shadow-pallete-400 shadow-pallete2-400 dark:bg-pallete-100 bg-pallete2-100 text-2xl min-w-32 sm:text-3xl xl:text-4xl rounded-3xl w-full sm:w-2/4  lg:w-3/4 h-24  flex-wrap text-center justify-center flex items-center">
                 Message 
             </h1>
             <div className="flex flex-col gap-4 w-full ">
-                <input type="text" placeholder="Your name" name="name" id="" className="bg-pallete-300 min-h-10 rounded-2xl p-5 outline-none shadow-md shadow-pallete-400" />
-                <textarea name="textArea" id="" cols="30" placeholder="Your message" rows="10" className="bg-pallete-300 rounded-2xl p-5 outline-none shadow-md shadow-pallete-400" />
-                <button className="bg-pallete-100 rounded-2xl p-5 shadow-md shadow-pallete-400">Send</button>
+                <input type="text" placeholder="Your name" name="name" id="" className="dark:bg-pallete-300 bg-pallete2-300 min-h-10 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
+                <textarea name="textArea" id="" cols="30" placeholder="Your message" rows="10" className="dark:bg-pallete-300 bg-pallete2-300 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
+                <button className="dark:bg-pallete-100 bg-pallete2-100 rounded-2xl p-5 dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400">Send</button>
             </div>
       </div>
-      <div className="shadow-md shadow-pallete-400 hidden rounded-3xl lg:flex min-w-50  max-w-full overflow-hidden">
+      <div className="dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400 hidden rounded-3xl lg:flex min-w-50  max-w-full overflow-hidden">
         <MapContainer
             className="full-height-map h-full w-full rounded-3xl"
             center={[31.146915, 33.834611]}

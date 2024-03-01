@@ -4,9 +4,13 @@
 
 
 .active{
-    color: #F6B17A;
-    transition: color 0.5s;
+  @apply text-pallete2-400 dark:text-pallete-400;
 }
+
+*{
+  @apply transition-colors duration-500; 
+}
+
 
 .slider{
     z-index: 1;

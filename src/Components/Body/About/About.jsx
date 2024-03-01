@@ -8,8 +8,8 @@ const About = () => {
         <div className="justify-self-center  flex flex-col gap-5 justify-center items-start lg:items-start w-fit p-4">
           <h1 className="text-5xl w-full font-bold mb-4 text-center lg:text-start">My, Self</h1>
           <div>
-            <h2 className="text-3xl font-bold text-pallete-500">Summary</h2>
-            <p className="text-xl text-pallete-300 font-bold mt-2 ml-3">
+            <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">Summary</h2>
+            <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
               I'm a back-end Developer on a mission to work as a full-stack
               developer in a big company one day. I love learning new things.
               Fluent in multiple programming languages, frameworks and
@@ -18,8 +18,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-pallete-500">Education </h2>
-            <p className="text-xl text-pallete-300 font-bold mt-2 ml-3">
+            <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">Education </h2>
+            <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
               Senior computer science student, @ Suez Canal University.
             </p>
           </div>
@@ -35,20 +35,20 @@ const About = () => {
         <div className="justify-self-center  lg:order-1 order-1 gap-6 flex flex-col   justify-center items-start lg:items-start w-fit p-4">
           <h1 className="text-5xl w-full font-bold mb-4 text-center lg:text-start"> Fav, Skills </h1>
           <div>
-            <h2 className="text-3xl font-bold text-pallete-500">
+            <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">
               Problem Solving
             </h2>
-            <p className="text-xl text-pallete-300 font-bold mt-2 ml-3">
+            <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
               Adept at breaking down problems, analyzing requirements, and
               devising elegant solutions.
             </p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-pallete-500">
+            <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">
               Competitive Programming
             </h2>
-            <p className="text-xl text-pallete-300 font-bold mt-2 ml-3">
+            <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
               Demonstrated success on platforms like LeetCode, Codeforces, and
               CodeChef, showcasing strong algorithmic and coding abilities. 🚀
             </p>
