@@ -555,94 +555,6 @@ video {
   top: 0px;
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
-.right-3 {
-  right: 0.75rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.right-5 {
-  right: 1.25rem;
-}
-
-.right-\[\] {
-  right: ;
-}
-
-.right-\[4px\] {
-  right: 4px;
-}
-
-.right-16 {
-  right: 4rem;
-}
-
-.right-\[\'16px\'\] {
-  right: '16px';
-}
-
-.right-\[16\] {
-  right: 16;
-}
-
-.right-\[16px\] {
-  right: 16px;
-}
-
-.right-\[1rem\] {
-  right: 1rem;
-}
-
-.right-\[\.8rem\] {
-  right: .8rem;
-}
-
-.right-\[1\.2rem\] {
-  right: 1.2rem;
-}
-
-.right-\[1\.1rem\] {
-  right: 1.1rem;
-}
-
-.right-\[1\.1\.4rem\] {
-  right: 1.1.4rem;
-}
-
-.right-\[1\.15rem\] {
-  right: 1.15rem;
-}
-
-.right-\[1\.16rem\] {
-  right: 1.16rem;
-}
-
-.right-\[1\.17rem\] {
-  right: 1.17rem;
-}
-
-.left-\[1\.17rem\] {
-  left: 1.17rem;
-}
-
 .-z-10 {
   z-index: -10;
 }
@@ -655,24 +567,12 @@ video {
   z-index: 10;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
 .z-20 {
   z-index: 20;
 }
 
 .z-\[50\] {
   z-index: 50;
-}
-
-.z-\[5\] {
-  z-index: 5;
 }
 
 .order-1 {
@@ -794,10 +694,6 @@ video {
   height: 100vh;
 }
 
-.h-11 {
-  height: 2.75rem;
-}
-
 .max-h-100 {
   max-height: 540px;
 }
@@ -856,22 +752,6 @@ video {
   width: 100%;
 }
 
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
-.w-14 {
-  width: 3.5rem;
-}
-
-.w-11 {
-  width: 2.75rem;
-}
-
 .min-w-32 {
   min-width: 8rem;
 }
@@ -921,10 +801,6 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -947,10 +823,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1003,10 +875,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-16 {
-  gap: 4rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1065,6 +933,11 @@ video {
   border-color: rgb(204 208 207 / var(--tw-border-opacity));
 }
 
+.bg-pallete-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+}
+
 .bg-pallete2-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(6 20 27 / var(--tw-bg-opacity));
@@ -1088,24 +961,6 @@ video {
 .bg-pallete2-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 33 45 / var(--tw-bg-opacity));
-}
-
-.bg-pallete-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
-}
-
-.bg-pallete-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(246 177 122 / var(--tw-bg-opacity));
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.object-contain {
-  object-fit: contain;
 }
 
 .object-cover {
@@ -1179,16 +1034,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pl-8 {
   padding-left: 2rem;
 }
 
 .pr-16 {
   padding-right: 4rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 
 .text-center {
@@ -1233,6 +1088,11 @@ video {
   font-weight: 600;
 }
 
+.text-pallete-700 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .text-pallete2-300 {
   --tw-text-opacity: 1;
   color: rgb(74 92 106 / var(--tw-text-opacity));
@@ -1246,16 +1106,6 @@ video {
 .text-pallete2-500 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-pallete2-700 {
-  --tw-text-opacity: 1;
-  color: rgb(6 20 27 / var(--tw-text-opacity));
-}
-
-.text-pallete-700 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -1574,11 +1424,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:text-pallete-700) {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
 :is(.dark .dark\:shadow-md) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1763,16 +1608,16 @@ video {
     justify-content: center;
   }
 
+  .lg\:gap-0 {
+    gap: 0px;
+  }
+
   .lg\:gap-3 {
     gap: 0.75rem;
   }
 
   .lg\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .lg\:gap-0 {
-    gap: 0px;
   }
 
   .lg\:gap-x-2 {
