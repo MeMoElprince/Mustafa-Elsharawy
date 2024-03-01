@@ -34,10 +34,10 @@ const Navbar = () => {
             {
 
             navbar && 
-            <motion.div className="lg:hidden items max-w-full w-fit h-screen flex-col flex items-start fixed top-0 z-50 overflow-y-auto -right-0 dark:bg-pallete-200 bg-pallete2-200 pl-8 pr-16 py-10"
-                initial={{x: 300}}
+            <motion.div className="lg:hidden items max-w-full w-fit h-screen flex-col flex items-start fixed top-0 z-[50] overflow-y-auto -right-0 dark:bg-pallete-200 bg-pallete2-200 pl-8 pr-16 py-10"
+                initial={{x: '100%'}}
                 animate={{x: 0}}
-                exit={{x: 300}}
+                exit={{x: '100%'}}
                 transition={{duration: .5}}
             >
                 <div onClick={handleClick} className='w-fit py-5  items-center cursor-pointer lg:hidden '>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
                 
                 <Items/>
-                <Mode className="my-4 w-full grid"/>
+                <Mode className="my-4 w-full grid" layoutName="activeMode1" />
                 <Footer  className="flex"/>
             </motion.div>
             }
@@ -56,7 +56,7 @@ const Navbar = () => {
             
             <Items className="hidden lg:block"/>
             
-            <Mode className="hidden" color=""/>
+            <Mode className="hidden" color="" layoutName="activeMode2"/>
             
             <Footer  className="hidden "/>
             
