@@ -34,7 +34,7 @@ const Navbar = () => {
             {
 
             navbar && 
-            <motion.div className="lg:hidden items max-w-full w-fit h-screen flex-col flex items-start fixed top-0 z-[50] overflow-y-auto -right-0 dark:bg-pallete-200 bg-pallete2-200 pl-8 pr-16 py-10"
+            <motion.div className="lg:hidden pt-0 overflow-hidden items max-w-full w-fit h-screen flex-col flex items-start fixed top-0 z-[50] overflow-y-auto -right-0 dark:bg-pallete-200 bg-pallete2-200 pl-8 pr-16 py-10"
                 initial={{x: '100%'}}
                 animate={{x: 0}}
                 exit={{x: '100%'}}
