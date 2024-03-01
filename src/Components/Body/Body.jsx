@@ -23,7 +23,6 @@ const movement = (prev, current) => {
 
 const Layout = ({ children, prev, current }) => {
   const animationType = movement(prev, current);
-  console.log({ animationType });
   
   const variantDown = {
     initial: {
