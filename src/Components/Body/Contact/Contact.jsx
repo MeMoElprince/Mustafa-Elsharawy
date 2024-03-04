@@ -1,9 +1,36 @@
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon  } from "leaflet";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Contant = ({prev}) => {
+    const [name, setName] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+    }
+    const handleMessageChange = (e) => {
+        setMessage(e.target.value);
+    }
+    const handleSend = () => {
+        fetch('https://my-website-email-backend.onrender.com/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({name, message})
+        }).then(res => res.json()).then(data => {
+            if(data.status === "success"){
+                alert("Message sent");
+            }else{
+                alert("Message failed to send");
+            }
+        }).catch(err => {
+            alert(err.message);
+        });
+
+    }
 
     useEffect(() => {
         prev(4);
@@ -20,9 +47,9 @@ const Contant = ({prev}) => {
                 Message 
             </h1>
             <div className="flex flex-col gap-4 w-full ">
-                <input type="text" placeholder="Your name" name="name" id="" className="dark:bg-pallete-300 bg-pallete2-300 min-h-10 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
-                <textarea name="textArea" id="" cols="30" placeholder="Your message" rows="10" className="dark:bg-pallete-300 bg-pallete2-300 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
-                <button className="dark:bg-pallete-100 bg-pallete2-100 rounded-2xl p-5 dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400">Send</button>
+                <input onChange={handleNameChange} type="text" placeholder="Your name" name="name" id="" required value={name} className="dark:bg-pallete-300 bg-pallete2-300 min-h-10 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
+                <textarea onChange={handleMessageChange} name="textArea" id="" cols="30" placeholder="Your message" rows="10" required value={message} className="dark:bg-pallete-300 bg-pallete2-300 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
+                <button onClick={handleSend} className="dark:bg-pallete-100 bg-pallete2-100 rounded-2xl p-5 dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400">Send</button>
             </div>
       </div>
       <div className="dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400 hidden rounded-3xl lg:flex min-w-50  max-w-full overflow-hidden">
