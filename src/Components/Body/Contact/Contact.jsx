@@ -53,6 +53,7 @@ const Contant = ({prev}) => {
         iconUrl: "https://cdn-icons-png.flaticon.com/512/927/927667.png",
         iconSize: [50, 50]
     })
+    
   return (
     <div className="contact h-full w-full grid gap-4 grid-cols-1 lg:grid-cols-2 p-8 place-content-center  ">
       <div className="flex flex-col flex-wrap justify-center gap-6 items-center p-4  h-fit rounded-3xl overflow-hidden font-bold">
