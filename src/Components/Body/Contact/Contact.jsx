@@ -70,7 +70,7 @@ const Contant = ({prev}) => {
         <MapContainer
             className="full-height-map h-full w-full rounded-3xl"
             center={[31.146915, 33.834611]}
-            zoom={13}
+            zoom={13}mda
             maxZoom={17}
             minZoom={2}
             maxBounds={[
