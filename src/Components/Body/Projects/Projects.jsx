@@ -2,6 +2,8 @@ import ProjectCard from "./ProjectCard";
 
 import selenium from '../../../Imgs/selenium.png'
 import natours from '../../../Imgs/Natours.png'
+import ramadan from '../../../Imgs/ramadan.png'
+
 import { useEffect } from "react";
 
 const Projects = ({prev}) => {
@@ -21,6 +23,7 @@ const Projects = ({prev}) => {
             </div>
 
             <div className="h-fit w-full flex flex-col gap-32 justify-center items-center pb-10">
+                <ProjectCard title={"Ramadan Points"} discreption={"Ramadan Points: A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan."} img={ramadan} tech={"NodeJs, ExpressJs, MongoDB, ReactJS, Tailwind"} repo={"https://github.com/MeMoElprince/ramadan-points"} />
                 <ProjectCard title={"Natours"} discreption={"A full-stack project for a fictional tour booking company called Natours.A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens."} img={natours} tech={"NodeJs, Express, MongoDB, PUG template"} repo={"https://github.com/MeMoElprince/My-Natours-Project"} live={"https://natours-memo.onrender.com/"} />
                 <ProjectCard title={"Codeforces-User-Submitions"} discreption={"Codeforces Website Script for ICPC-SuezCanal-Community: Tracking Trainee Submissions"} img={selenium} tech={"Python, Selenium, Web Scrapping"} repo={"https://github.com/MeMoElprince/Codeforces-User-Submissions"} />
             </div>
