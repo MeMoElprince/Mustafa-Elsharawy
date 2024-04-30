@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import selenium from '../../../Imgs/selenium.png'
 import natours from '../../../Imgs/Natours.png'
 import ramadan from '../../../Imgs/ramadan.png'
+import pokingapp from '../../../Imgs/pokingapp.png'
 
 import { useEffect } from "react";
 
@@ -23,6 +24,7 @@ const Projects = ({prev}) => {
             </div>
 
             <div className="h-fit w-full flex flex-col gap-32 justify-center items-center pb-10">
+                <ProjectCard title={"Poking App"} discreption={"A peer‐to‐peer chat app emphasizing secure messaging. With strong authorization and authentication, it ensures privacy. Designed for effi‐ciency, it offers direct one-on-one chatting."} img={pokingapp} tech={"NodeJs, ExpressJs, MongoDB, Socket.IO"} repo={"https://github.com/MeMoElprince/poking-app"} live={"https://pokingapp.vercel.app/"} />
                 <ProjectCard title={"Ramadan Points"} discreption={"Ramadan Points: A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan."} img={ramadan} tech={"NodeJs, ExpressJs, MongoDB, ReactJS, Tailwind"} repo={"https://github.com/MeMoElprince/ramadan-points"} live={"https://ramadanpoints.vercel.app/"} />
                 <ProjectCard title={"Natours"} discreption={"A full-stack project for a fictional tour booking company called Natours.A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens."} img={natours} tech={"NodeJs, Express, MongoDB, PUG template"} repo={"https://github.com/MeMoElprince/My-Natours-Project"} live={"https://natours-memo.onrender.com/"} />
                 <ProjectCard title={"Codeforces-User-Submitions"} discreption={"Codeforces Website Script for ICPC-SuezCanal-Community: Tracking Trainee Submissions"} img={selenium} tech={"Python, Selenium, Web Scrapping"} repo={"https://github.com/MeMoElprince/Codeforces-User-Submissions"} />
