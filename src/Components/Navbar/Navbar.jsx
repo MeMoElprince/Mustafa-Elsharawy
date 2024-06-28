@@ -22,7 +22,7 @@ const Navbar = () => {
                 <NavLink className=' h-fit p-2 flex justify-center  items-center 'to="/">
                         <img className="mxs:w-24 mxs:h-24 h-32 w-32 object-cover rounded-full" src={img} alt="" />
                 </NavLink>
-                <h1 className='mxs:hidden dark:text-pallete-400 text-pallete2-400 text-4xl font-bold lg:text-3xl  text-center'> Full Stack Developer  </h1>
+                <h1 className='mxs:hidden dark:text-pallete-400 text-pallete2-400 text-4xl font-bold lg:text-3xl  text-center'> Junior Software Engineer  </h1>
                 <div onClick={handleClick} className='w-fit flex items-center  cursor-pointer lg:hidden'>
                     <svg className='w-12 text-pallete-500' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

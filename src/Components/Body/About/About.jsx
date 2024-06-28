@@ -18,10 +18,10 @@ const About = ({prev}) => {
           <div>
             <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">Summary</h2>
             <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
-              I'm a back-end Developer on a mission to work as a full-stack
-              developer in a big company one day. I love learning new things.
-              Fluent in multiple programming languages, frameworks and
-              technologies. when I'm not coding, you can find me playing video
+            Hello👋, I'm a passionate back-end developer with a strong desire to become a back-end developer in a big company.
+            I am constantly seeking out new technologies and exploring back-end development to understand the behind-the-scenes processes that power our software. 
+            🕊️. 
+            when I'm not coding, you can find me playing video
               games, watching movies.
             </p>
           </div>

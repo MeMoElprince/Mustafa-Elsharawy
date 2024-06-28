@@ -1,19 +1,20 @@
-## Available Scripts
+## Welcome To My Website
 
-In the project directory, you can run:
+> ### Visit My Website:
+> [Mustafa Elsharawy](https://mustafa-elsharawy.vercel.app)
 
-### `npm start`
+> ### Contact Me
+> - **Email**: [memomeme621@gmail.com](mailto:memomeme621@gmail.com)
+> - **LinkedIn**: [Mustafa Elsharawy](https://www.linkedin.com/in/mustafaelsharawy)
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> ### About Me
+###### I'm Mustafa Elsharawy a junior software engineer who is passionate about software development and open source. I'm always looking for new opportunities to learn and grow.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> ### My Skills
+- **Languages**: Python, JavaScript, TypeScript, C++, SQL
+- **Frameworks**: Node.js, Express.js, React.js, TailwindCSS
+- **Tools**: Github, Scripts, API, Selenium, Socket.IO, Migration
+- **Technical Skills**: Data Structures, Algorithms, OOP, Databases, WebSockets, Problem‑Solving, Competitive Programming, Database Design
+  

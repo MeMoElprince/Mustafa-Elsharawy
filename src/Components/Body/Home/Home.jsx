@@ -23,8 +23,8 @@ const Home = ({prev}) => {
                         <h1 className="clamp   lg:text-7xl sm:text-5xl text-4xl"> Mustafa Hazem Elsharawy <div className="loader  inline-flex translate-y-2 lg:w-14 w-10"></div> </h1>
                         
                     </div>
-                    <h1 className="lg:text-4xl sm:text-3xl text-2xl"> Full Stack Web Developer </h1>
-                    <h1 className="lg:text-2xl text-xl"> I am a senior cs student 😀 </h1>
+                    <h1 className="lg:text-4xl sm:text-3xl text-2xl"> Junior Backend Developer </h1>
+                    <h1 className="lg:text-2xl text-xl"> I am a fresh graduated software engineer 😀 </h1>
                 </div>
                 <MyCard className="order-1 lg:max-h-200 lg:max-w-200 max-w-100 max-h-100 md:order-2 aspect-[3.2/4]"/>
             </div>
