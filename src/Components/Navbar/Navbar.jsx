@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import img from '../../Imgs/me.jpeg';
+import img from '../../Imgs/Mustafa-Elsharawy-2024.jpg';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useState} from 'react';
 import Items from './Items';

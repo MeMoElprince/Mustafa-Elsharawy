@@ -26,7 +26,7 @@ const Home = ({prev}) => {
                     <h1 className="lg:text-4xl sm:text-3xl text-2xl"> Junior Backend Developer </h1>
                     <h1 className="lg:text-2xl text-xl"> I am a fresh graduated software engineer 😀 </h1>
                 </div>
-                <MyCard className="order-1 lg:max-h-200 lg:max-w-200 max-w-100 max-h-100 md:order-2 aspect-[3.2/4]"/>
+                <MyCard className="order-1 lg:max-h-200 lg:max-w-200 max-w-100 max-h-100 md:order-2  "/>
             </div>
             
             <Slider />
