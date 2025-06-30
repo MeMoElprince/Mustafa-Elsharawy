@@ -18,17 +18,18 @@ const About = ({prev}) => {
           <div>
             <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">Summary</h2>
             <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
-            Hello👋, I'm a passionate back-end developer with a strong desire to become a back-end developer in a big company.
-            I am constantly seeking out new technologies and exploring back-end development to understand the behind-the-scenes processes that power our software. 
-            🕊️. 
-            when I'm not coding, you can find me playing video
-              games, watching movies.
+            Backend-focused Software Engineer with deep expertise in Node.js, NestJS, PostgreSQL, and MongoDB,
+            passionate about building robust, scalable, and maintainable backend systems. I specialize in microservices
+            architecture, Docker-based deployments, and asynchronous communication using message queues, with
+            hands-on experience delivering features that serve real business needs. With a strong foundation in competitive
+            programming, DevOps (CI/CD pipelines, cloud deployments), and problem-solving, I bring both technical depth
+            and product-thinking, ensuring every service I build is efficient, secure, and aligned with business goals.
             </p>
           </div>
           <div>
             <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500">Education </h2>
             <p className="text-xl dark:text-pallete-300 text-pallete2-300 font-bold mt-2 ml-3">
-              Senior computer science student, @ Suez Canal University.
+              Bachelor’s degree in Computer Science (GPA: 3.42 / 4.00) Ismailia, Egypt
             </p>
           </div>
         </div>
