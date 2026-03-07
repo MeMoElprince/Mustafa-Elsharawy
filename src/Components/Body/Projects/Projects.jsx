@@ -1,38 +1,99 @@
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import selenium from '../../../Imgs/selenium.png';
+import natours from '../../../Imgs/Natours.png';
+import ramadan from '../../../Imgs/ramadan.png';
+import pokingapp from '../../../Imgs/pokingapp.png';
 
-import selenium from '../../../Imgs/selenium.png'
-import natours from '../../../Imgs/Natours.png'
-import ramadan from '../../../Imgs/ramadan.png'
-import pokingapp from '../../../Imgs/pokingapp.png'
+const projects = [
+    {
+        title: "Poking App",
+        description: "A peer-to-peer chat app emphasizing secure messaging. With strong authorization and authentication, it ensures privacy. Designed for efficiency, it offers direct one-on-one chatting.",
+        img: pokingapp,
+        tech: ["Node.js", "Express.js", "MongoDB", "Socket.IO"],
+        repo: "https://github.com/MeMoElprince/poking-app",
+        live: "https://pokingapp.vercel.app/",
+    },
+    {
+        title: "Ramadan Points",
+        description: "A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan.",
+        img: ramadan,
+        tech: ["Node.js", "Express.js", "MongoDB", "React", "Tailwind"],
+        repo: "https://github.com/MeMoElprince/ramadan-points",
+        live: "https://ramadanpoints.vercel.app/",
+    },
+    {
+        title: "Natours",
+        description: "A full-stack project for a fictional tour booking company. A comprehensive RESTful API with CRUD operations, user authentication, and JWT-based authorization.",
+        img: natours,
+        tech: ["Node.js", "Express", "MongoDB", "PUG Templates"],
+        repo: "https://github.com/MeMoElprince/My-Natours-Project",
+        live: "https://natours-memo.onrender.com/",
+        liveDisabled: true,
+    },
+    {
+        title: "CF Submissions Tracker",
+        description: "Codeforces website automation script for the ICPC Suez Canal Community — automatically tracking and reporting trainee submission data via web scraping.",
+        img: selenium,
+        tech: ["Python", "Selenium", "Web Scraping"],
+        repo: "https://github.com/MeMoElprince/Codeforces-User-Submissions",
+    },
+];
 
-import { useEffect } from "react";
+const Projects = () => {
+    return (
+        <div className="dark:bg-pallete-100 bg-pallete2-100">
+            <div className="max-w-6xl mx-auto px-6 py-20">
 
-const Projects = ({prev}) => {
-    useEffect(() => {
-        prev(3);
-    }, []);
-    return ( 
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-12"
+                >
+                    <div className="flex items-end justify-between flex-wrap gap-4">
+                        <div>
+                            <h2 className="text-3xl md:text-4xl font-bold dark:text-pallete-500 text-pallete2-500">
+                                My <span className="dark:text-pallete-400 text-pallete2-400">Projects</span>
+                            </h2>
+                            <div className="mt-3 w-12 h-0.5 dark:bg-pallete-400 bg-pallete2-400 rounded-full" />
+                        </div>
+                        <a
+                            href="https://github.com/MeMoElprince"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium dark:text-pallete-400 text-pallete2-400 dark:hover:text-pallete-500 hover:text-pallete2-500 transition-colors flex items-center gap-1.5"
+                        >
+                            View all on GitHub
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p className="dark:text-pallete-600 text-pallete2-600 text-base mt-4 max-w-2xl">
+                        A selection of things I've built — from real-time chat apps and REST APIs to web scraping tools and full-stack platforms.
+                    </p>
+                </motion.div>
 
-        <div className="projects flex flex-col gap-10 w-full h-full ">
-            <div className="lg:my-10 h-fit w-full  flex flex-col text-center gap-10 dark:text-pallete-500 text-pallete2-500 font-bold p-4 justify-center items-center">
-                <h1 className="text-4xl dark:text-pallete-400 text-pallete2-400 lg:text-5xl ">
-                    Projects
-                </h1>
-                <p className="text-xl lg:text-2xl max-w-300">
-                    Welcome to the Projects section, where chaos meets creativity, deadlines dance, and miracles occasionally happen. Buckle up for a rollercoaster ride through my adventures in organized chaos!
-                </p>
-            </div>
+                {/* Scalable grid — add more projects and they flow naturally */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                    {projects.map((project, i) => (
+                        <motion.div
+                            key={project.title}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-40px' }}
+                            transition={{ duration: 0.45, delay: i * 0.07 }}
+                        >
+                            <ProjectCard {...project} />
+                        </motion.div>
+                    ))}
+                </div>
 
-            <div className="h-fit w-full flex flex-col gap-32 justify-center items-center pb-10">
-                <ProjectCard title={"Poking App"} discreption={"A peer‐to‐peer chat app emphasizing secure messaging. With strong authorization and authentication, it ensures privacy. Designed for effi‐ciency, it offers direct one-on-one chatting."} img={pokingapp} tech={"NodeJs, ExpressJs, MongoDB, Socket.IO"} repo={"https://github.com/MeMoElprince/poking-app"} live={"https://pokingapp.vercel.app/"} />
-                <ProjectCard title={"Ramadan Points"} discreption={"Ramadan Points: A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan."} img={ramadan} tech={"NodeJs, ExpressJs, MongoDB, ReactJS, Tailwind"} repo={"https://github.com/MeMoElprince/ramadan-points"} live={"https://ramadanpoints.vercel.app/"} />
-                <ProjectCard title={"Natours"} discreption={"A full-stack project for a fictional tour booking company called Natours.A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens."} img={natours} tech={"NodeJs, Express, MongoDB, PUG template"} repo={"https://github.com/MeMoElprince/My-Natours-Project"} live={"https://natours-memo.onrender.com/"} />
-                <ProjectCard title={"Codeforces-User-Submitions"} discreption={"Codeforces Website Script for ICPC-SuezCanal-Community: Tracking Trainee Submissions"} img={selenium} tech={"Python, Selenium, Web Scrapping"} repo={"https://github.com/MeMoElprince/Codeforces-User-Submissions"} />
             </div>
         </div>
-        
-        
-     );
-}
- 
-export default Projects
+    );
+};
+
+export default Projects;

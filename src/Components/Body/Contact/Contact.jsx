@@ -1,100 +1,153 @@
-import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Icon  } from "leaflet";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { BsGithub, BsLinkedin, BsEnvelope } from "react-icons/bs";
+import { HiLocationMarker } from "react-icons/hi";
 
-const Contant = ({prev}) => {
-    const [name, setName] = useState("");
-    const [message, setMessage] = useState("");
-    const [buttonName, setButtonName] = useState("Send");
-    const [disabled, setDisabled] = useState("");
+const contactLinks = [
+    {
+        icon: <BsLinkedin size={22} />,
+        label: "LinkedIn",
+        value: "mustafa-elsharawy",
+        href: "https://www.linkedin.com/in/mustafa-elsharawy-98420a216/",
+    },
+    {
+        icon: <BsGithub size={22} />,
+        label: "GitHub",
+        value: "MeMoElprince",
+        href: "https://github.com/MeMoElprince",
+    },
+    {
+        icon: <BsEnvelope size={22} />,
+        label: "Email",
+        value: "mostafahaz120@gmail.com",
+        href: "mailto:mostafahaz120@gmail.com",
+    },
+    {
+        icon: <HiLocationMarker size={22} />,
+        label: "Location",
+        value: "Cairo, Egypt",
+        href: null,
+    },
+];
 
-    const handleNameChange = (e) => {
-        setName(e.target.value);
-    }
+const Contact = () => {
+    return (
+        <div className="dark:bg-pallete-100 bg-pallete2-100">
+            <div className="h-px dark:bg-pallete-300 bg-pallete2-300" />
 
-    const handleMessageChange = (e) => {
-        setMessage(e.target.value);
-    }
-    
-    const handleSend = () => {
-        if(name === "" || message === ""){
-            alert("Please fill all fields");
-            return;
-        }
-        setButtonName("Sending...");
-        fetch('https://my-website-email-backend.onrender.com/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({name, message})
-        }).then(res => res.json()).then(data => {
-            if(data.status === "success"){
-                alert("Message sent");
-            }else{
-                alert("Message failed to send");
-            }
-            setButtonName("Send");
-            setDisabled("");
-        }).catch(err => {
-            alert(err.message);
-            setButtonName("Send");
-            setDisabled("");
-        });
-        
-    }
+            <div className="max-w-6xl mx-auto px-6 py-20">
 
-    useEffect(() => {
-        prev(4);
-    });
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-12"
+                >
+                    <h2 className="text-3xl md:text-4xl font-bold dark:text-pallete-500 text-pallete2-500">
+                        Get In <span className="dark:text-pallete-400 text-pallete2-400">Touch</span>
+                    </h2>
+                    <div className="mt-3 w-12 h-0.5 dark:bg-pallete-400 bg-pallete2-400 rounded-full" />
+                    <p className="dark:text-pallete-600 text-pallete2-600 text-base mt-4 max-w-xl">
+                        Always open to interesting conversations about backend engineering, AI systems,
+                        exciting collaborations, or new opportunities.
+                    </p>
+                </motion.div>
 
-    const icon = new Icon({
-        iconUrl: "https://cdn-icons-png.flaticon.com/512/927/927667.png",
-        iconSize: [50, 50]
-    })
-    
-  return (
-    <div className="contact h-full w-full grid gap-4 grid-cols-1 lg:grid-cols-2 p-8 place-content-center  ">
-      <div className="flex flex-col flex-wrap justify-center gap-6 items-center p-4  h-fit rounded-3xl overflow-hidden font-bold">
-            <h1 className="shadow-md dark:shadow-pallete-400 shadow-pallete2-400 dark:bg-pallete-100 bg-pallete2-100 text-2xl min-w-32 sm:text-3xl xl:text-4xl rounded-3xl w-full sm:w-2/4  lg:w-3/4 h-24  flex-wrap text-center justify-center flex items-center">
-                Message 
-            </h1>
-            <div className="flex flex-col gap-4 w-full ">
-                <input onChange={handleNameChange} type="text" placeholder="Your name" name="name" id="" required value={name} className="dark:bg-pallete-300 bg-pallete2-300 min-h-10 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
-                <textarea onChange={handleMessageChange} name="textArea" id="" cols="30" placeholder="Your message" rows="10" required value={message} className="dark:bg-pallete-300 bg-pallete2-300 rounded-2xl p-5 outline-none shadow-md dark:shadow-pallete-400 shadow-pallete2-400" />
-                <button onClick={handleSend} className={"dark:bg-pallete-100  bg-pallete2-100 rounded-2xl p-5 dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400 " + disabled}>{buttonName}</button>
+                {/* Status card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.45 }}
+                    className="dark:bg-pallete-200 bg-pallete2-200 rounded-2xl p-6 border dark:border-pallete-300 border-pallete2-300 mb-8"
+                >
+                    <div className="flex items-center gap-3 mb-2">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
+                        <span className="text-sm font-semibold dark:text-pallete-500 text-pallete2-500">
+                            Software Engineer @ Projecx
+                        </span>
+                    </div>
+                    <p className="text-sm dark:text-pallete-600 text-pallete2-600 leading-relaxed">
+                        Building backend systems and AI-powered products. Feel free to reach out — whether it's
+                        a project idea, a collaboration, or just a chat about tech.
+                    </p>
+                </motion.div>
+
+                {/* Contact links grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    {contactLinks.map((link, i) =>
+                        link.href ? (
+                            <motion.a
+                                key={link.label}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 16 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-40px' }}
+                                transition={{ duration: 0.4, delay: i * 0.07 }}
+                                className="flex flex-col items-center gap-3 p-6 dark:bg-pallete-200 bg-pallete2-200 rounded-2xl border dark:border-pallete-300 border-pallete2-300 dark:hover:border-pallete-400 hover:border-pallete2-400 group transition-all hover:-translate-y-0.5"
+                            >
+                                <div className="dark:text-pallete-400 text-pallete2-400 group-hover:scale-110 transition-transform">
+                                    {link.icon}
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-xs dark:text-pallete-600 text-pallete2-600 uppercase tracking-wider mb-0.5">
+                                        {link.label}
+                                    </div>
+                                    <div className="text-sm font-medium dark:text-pallete-500 text-pallete2-500">
+                                        {link.value}
+                                    </div>
+                                </div>
+                                <svg className="w-3.5 h-3.5 dark:text-pallete-600 text-pallete2-600 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </motion.a>
+                        ) : (
+                            <motion.div
+                                key={link.label}
+                                initial={{ opacity: 0, y: 16 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-40px' }}
+                                transition={{ duration: 0.4, delay: i * 0.07 }}
+                                className="flex flex-col items-center gap-3 p-6 dark:bg-pallete-200 bg-pallete2-200 rounded-2xl border dark:border-pallete-300 border-pallete2-300"
+                            >
+                                <div className="dark:text-pallete-400 text-pallete2-400">
+                                    {link.icon}
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-xs dark:text-pallete-600 text-pallete2-600 uppercase tracking-wider mb-0.5">
+                                        {link.label}
+                                    </div>
+                                    <div className="text-sm font-medium dark:text-pallete-500 text-pallete2-500">
+                                        {link.value}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )
+                    )}
+                </div>
+
+                {/* Resume CTA */}
+                <motion.a
+                    href="https://drive.google.com/file/d/1PG_s0akDh3H1hT3J3u2Q8CjTiKN6W55w/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.45, delay: 0.2 }}
+                    className="flex items-center justify-center gap-2 p-4 rounded-xl border-2 border-dashed dark:border-pallete-400/40 border-pallete2-400/40 dark:text-pallete-400 text-pallete2-400 dark:hover:border-pallete-400 hover:border-pallete2-400 dark:hover:bg-pallete-400/5 hover:bg-pallete2-400/5 transition-all text-sm font-medium"
+                >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download Resume
+                </motion.a>
+
             </div>
-      </div>
-      <div className="dark:shadow-md shadow-md dark:shadow-pallete-400 shadow-pallete2-400 hidden rounded-3xl lg:flex min-w-50  max-w-full overflow-hidden">
-        <MapContainer
-            className="full-height-map h-full w-full rounded-3xl"
-            center={[31.146915, 33.834611]}
-            zoom={13}mda
-            maxZoom={17}
-            minZoom={2}
-            maxBounds={[
-            [-85.06, -180],
-            [85.06, 180],
-            ]}
-            scrollWheelZoom={true}
-        >
-            <TileLayer
-            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-            />
-
-            <Marker position={[31.146915, 33.834611]} icon={icon}>
-                <Popup>
-                    I am over here
-                </Popup>
-            </Marker>
-            
-        </MapContainer>
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-
-
-export default Contant;
+export default Contact;
