@@ -1,4 +1,6 @@
-const ProjectCard = ({ img, title, description, tech, live, repo }) => {
+const ProjectCard = ({ img, title, description, tech, live, liveDisabled, repo }) => {
+    const showLive = live && !liveDisabled;
+
     return (
         <div className="dark:bg-pallete-200 bg-pallete2-200 rounded-2xl overflow-hidden border dark:border-pallete-300 border-pallete2-300 flex flex-col group dark:hover:border-pallete-400/60 hover:border-pallete2-400/60 transition-all duration-300 hover:shadow-xl dark:hover:shadow-pallete-400/5 hover:shadow-pallete2-400/5 hover:-translate-y-1">
             {/* Orange accent top bar */}
@@ -13,7 +15,7 @@ const ProjectCard = ({ img, title, description, tech, live, repo }) => {
                         alt={title}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t dark:from-pallete-200/60 from-pallete2-200/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 gap-3">
-                        {live && (
+                        {showLive && (
                             <a
                                 href={live}
                                 target="_blank"
@@ -46,7 +48,7 @@ const ProjectCard = ({ img, title, description, tech, live, repo }) => {
                         {title}
                     </h3>
                     <div className="flex gap-2 flex-shrink-0">
-                        {live && (
+                        {showLive && (
                             <a
                                 href={live}
                                 target="_blank"

@@ -137,7 +137,7 @@ const Home = () => {
                                     <BsLinkedin size={22} />
                                 </a>
                                 <div className="h-4 w-px dark:bg-pallete-300 bg-pallete2-300 mx-1" />
-                                <span className="text-xs dark:text-pallete-600 text-pallete2-600 font-mono">Ismailia, Egypt</span>
+                                <span className="text-xs dark:text-pallete-600 text-pallete2-600 font-mono">Cairo, Egypt</span>
                             </div>
                         </motion.div>
 

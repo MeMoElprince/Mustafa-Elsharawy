@@ -10,6 +10,7 @@ const experiences = [
         bullets: [
             'Designing and building scalable backend services for social media and CRM platforms using NestJS and PostgreSQL.',
             'Built a real-time notifications system integrating Jeebly (delivery), Mamo Pay (payments), and OneSignal (push).',
+            'Developed an AI-powered chatbot agent using LangChain and LangGraph, enabling intelligent conversational flows within the platform.',
             'Contributing to backend architecture decisions and delivering production-grade APIs across mobile and web products in an Agile environment.',
         ],
     },
@@ -17,8 +18,8 @@ const experiences = [
         role: 'Co-Founder & Software Engineer',
         type: 'Co-Founder',
         company: 'Votechx',
-        period: 'Feb 2024 – Present',
-        current: true,
+        period: 'Feb 2024 – Oct 2025',
+        current: false,
         bullets: [
             'Co-founded a software company delivering custom backend systems, APIs, and infrastructure for client projects.',
             'Managed full DevOps stack: VPS deployments, Docker containers, CI/CD pipelines.',
