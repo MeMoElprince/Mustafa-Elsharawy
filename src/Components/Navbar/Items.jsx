@@ -4,7 +4,7 @@ const navItems = [
     { to: '/', label: 'Home' },
     { to: '/about-me', label: 'About' },
     { to: '/my-projects', label: 'Projects' },
-    { to: 'https://drive.google.com/file/d/1PG_s0akDh3H1hT3J3u2Q8CjTiKN6W55w/view?usp=sharing', label: 'Resume', external: true },
+    { to: 'https://drive.google.com/file/d/11cvDkZWc5YTKdnz6JdX8ib4BcrMFibf5/view?usp=sharing', label: 'Resume', external: true },
     { to: '/contact-me', label: 'Contact' },
 ];
 

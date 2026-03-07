@@ -42,7 +42,7 @@ const skillCategories = [
     },
     {
         label: "Databases",
-        skills: ["PostgreSQL", "MongoDB", "Redis", "TypeORM", "Mongoose"],
+        skills: ["PostgreSQL", "MongoDB", "Redis", "Sequelize", "Prisma", "Mongoose"],
     },
     {
         label: "DevOps & Infra",

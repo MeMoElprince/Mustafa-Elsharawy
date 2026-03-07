@@ -109,7 +109,7 @@ const Home = () => {
                                     Contact Me
                                 </button>
                                 <a
-                                    href="https://drive.google.com/file/d/1PG_s0akDh3H1hT3J3u2Q8CjTiKN6W55w/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/11cvDkZWc5YTKdnz6JdX8ib4BcrMFibf5/view?usp=sharing"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-4 py-3 dark:text-pallete-600 text-pallete2-600 font-medium text-sm dark:hover:text-pallete-400 hover:text-pallete2-400 transition-colors"
