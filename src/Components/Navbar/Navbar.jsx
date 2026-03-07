@@ -85,7 +85,7 @@ const Navbar = () => {
                         </button>
                     ))}
                     <a
-                        href="https://drive.google.com/file/d/1PG_s0akDh3H1hT3J3u2Q8CjTiKN6W55w/view?usp=sharing"
+                        href="https://drive.google.com/file/d/11cvDkZWc5YTKdnz6JdX8ib4BcrMFibf5/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="ml-2 px-4 py-1.5 rounded-md text-sm font-medium border dark:border-pallete-400 border-pallete2-400 dark:text-pallete-400 text-pallete2-400 dark:hover:bg-pallete-300 hover:bg-pallete2-300 transition-colors"
@@ -139,7 +139,7 @@ const Navbar = () => {
                                 </button>
                             ))}
                             <a
-                                href="https://drive.google.com/file/d/1PG_s0akDh3H1hT3J3u2Q8CjTiKN6W55w/view?usp=sharing"
+                                href="https://drive.google.com/file/d/11cvDkZWc5YTKdnz6JdX8ib4BcrMFibf5/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setMenuOpen(false)}
