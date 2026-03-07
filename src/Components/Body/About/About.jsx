@@ -268,7 +268,7 @@ const About = () => {
                             ))}
                         </div>
                         <div className="flex flex-wrap gap-2">
-                            {['LeetCode', 'Codeforces', 'CodeChef'].map(p => (
+                            {['LeetCode', 'Codeforces', 'CodeChef', 'AtCoder'].map(p => (
                                 <span
                                     key={p}
                                     className="px-3 py-1 rounded-lg text-xs font-medium dark:bg-pallete-300 bg-pallete2-300 dark:text-pallete-400 text-pallete2-400"
