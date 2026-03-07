@@ -223,7 +223,7 @@ const About = () => {
                                 <p className="text-sm dark:text-pallete-400 text-pallete2-400 font-semibold mt-0.5">
                                     GPA: 3.42 / 4.00
                                 </p>
-                                <p className="text-sm dark:text-pallete-600 text-pallete2-600 mt-0.5">Cairo, Egypt</p>
+                                <p className="text-sm dark:text-pallete-600 text-pallete2-600 mt-0.5">Ismailia, Egypt</p>
                             </div>
                         </div>
                         <p className="text-sm dark:text-pallete-600 text-pallete2-600 leading-relaxed">
