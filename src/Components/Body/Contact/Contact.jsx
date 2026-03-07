@@ -91,12 +91,12 @@ const Contact = () => {
                             <div className="flex items-center gap-3 mb-3">
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
                                 <span className="text-sm font-semibold dark:text-pallete-500 text-pallete2-500">
-                                    Currently open to opportunities
+                                    Software Engineer @ Projecx · Co-Founder @ Votechx
                                 </span>
                             </div>
                             <p className="text-sm dark:text-pallete-600 text-pallete2-600 leading-relaxed">
-                                I'm looking for backend engineering roles where I can build scalable systems,
-                                contribute to interesting products, and grow as an engineer.
+                                Always open to interesting conversations about backend engineering, AI systems,
+                                exciting collaborations, or new opportunities. Feel free to reach out.
                             </p>
                         </div>
 

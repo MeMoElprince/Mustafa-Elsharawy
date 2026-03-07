@@ -16,7 +16,7 @@ const focusAreas = [
     {
         icon: "🔀",
         title: "Microservices Architecture",
-        desc: "Designing distributed systems with clear service boundaries, message queues (RabbitMQ), and fault-tolerant patterns.",
+        desc: "Designing distributed systems with clear service boundaries, RabbitMQ message queues, and fault-tolerant patterns.",
     },
     {
         icon: "🗄️",
@@ -26,26 +26,35 @@ const focusAreas = [
     {
         icon: "🚀",
         title: "DevOps & CI/CD",
-        desc: "Containerizing services with Docker, building automated pipelines, and deploying to cloud environments.",
+        desc: "Containerizing services with Docker, building automated pipelines, and deploying on VPS and cloud environments.",
+    },
+    {
+        icon: "🤖",
+        title: "AI-Powered Systems",
+        desc: "Building intelligent backend agents using LangChain and LangGraph, integrating local LLMs via Ollama into production systems.",
     },
 ];
 
 const skillCategories = [
     {
         label: "Backend",
-        skills: ["Node.js", "NestJS", "Express.js", "REST APIs", "Microservices", "WebSockets"],
+        skills: ["Node.js", "NestJS", "Express.js", "Ruby on Rails", "REST APIs", "Microservices", "WebSockets"],
     },
     {
         label: "Databases",
         skills: ["PostgreSQL", "MongoDB", "Redis", "TypeORM", "Mongoose"],
     },
     {
-        label: "DevOps & Tools",
-        skills: ["Docker", "CI/CD", "Git", "Linux", "Nginx", "Postman"],
+        label: "DevOps & Infra",
+        skills: ["Docker", "CI/CD", "Nginx", "Linux", "VPS", "Git", "RabbitMQ", "Postman"],
     },
     {
         label: "Languages",
-        skills: ["JavaScript", "TypeScript", "Python", "C++", "C"],
+        skills: ["JavaScript", "TypeScript", "Python", "Ruby", "C++", "C"],
+    },
+    {
+        label: "AI & LLM",
+        skills: ["LangChain", "LangGraph", "Ollama", "LLM Integration"],
     },
     {
         label: "Frontend",
@@ -86,21 +95,27 @@ const About = () => {
                             </span>
                         </div>
                         <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed">
-                            I'm a backend-focused engineer who loves building the infrastructure that powers modern applications.
-                            With a deep interest in scalable systems, I thrive at the intersection of clean code, distributed
-                            architecture, and real-world product impact.
+                            I'm a backend engineer with production experience across multiple companies — currently building
+                            scalable systems at{' '}
+                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>{' '}
+                            and co-founding{' '}
+                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Votechx</span>.
+                            I thrive at the intersection of clean code, distributed architecture, and real-world product impact.
                         </p>
                         <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed">
-                            My core expertise lies in the{' '}
+                            My core expertise is the{' '}
                             <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Node.js ecosystem</span>{' '}
-                            — building with NestJS and Express.js, paired with{' '}
-                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">PostgreSQL and MongoDB</span>{' '}
-                            for data persistence. I bring both technical depth and product-thinking to every project.
+                            — NestJS, Express.js, PostgreSQL, and MongoDB. I've expanded into{' '}
+                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Ruby on Rails</span>{' '}
+                            and{' '}
+                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">AI-powered systems</span>,
+                            building intelligent backends using LangChain, LangGraph, and local LLMs via Ollama.
                         </p>
                         <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed">
-                            A strong background in{' '}
+                            A background in{' '}
                             <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">competitive programming</span>{' '}
-                            sharpened my algorithmic thinking — skills I apply directly to designing efficient, high-performance backend systems.
+                            — with ICPC qualifications and top rankings in ECPC — keeps my algorithmic thinking sharp
+                            and directly informs how I design efficient, high-performance systems.
                         </p>
                     </motion.div>
 
@@ -111,12 +126,12 @@ const About = () => {
                         className="flex flex-col gap-3"
                     >
                         {[
-                            { label: "Specialty", value: "Backend Systems & APIs" },
+                            { label: "Currently", value: "Software Engineer @ Projecx" },
+                            { label: "Also", value: "Co-Founder @ Votechx" },
                             { label: "Primary Stack", value: "Node.js · NestJS · PostgreSQL" },
                             { label: "Architecture", value: "Microservices · REST · Event-Driven" },
                             { label: "Education", value: "B.Sc. Computer Science — GPA 3.42/4.00" },
                             { label: "Location", value: "Ismailia, Egypt" },
-                            { label: "Status", value: "Open to opportunities" },
                         ].map(item => (
                             <div
                                 key={item.label}
@@ -139,7 +154,7 @@ const About = () => {
                         <SectionTitle label="What I" accent="Do" />
                     </motion.div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {focusAreas.map((area, i) => (
                             <motion.div
                                 key={area.title}
@@ -235,9 +250,26 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
-                        <p className="text-sm dark:text-pallete-600 text-pallete2-600 leading-relaxed mb-4">
-                            Active competitive programmer with strong algorithmic skills across multiple platforms.
-                        </p>
+                        <div className="flex flex-col gap-2 mb-4">
+                            {[
+                                { event: 'ECPCQ 2021', result: '11th Place', highlight: false },
+                                { event: 'ECPCQ 2022', result: '4th Place — Qualified', highlight: true },
+                                { event: 'ECPCQ 2023', result: '8th Place — Qualified', highlight: true },
+                                { event: 'ECPC 2022', result: 'Honorable Mention', highlight: false },
+                                { event: 'ECPC 2023', result: '98th Place', highlight: false },
+                            ].map(a => (
+                                <div key={a.event} className="flex items-center justify-between gap-2">
+                                    <span className="text-xs dark:text-pallete-600 text-pallete2-600 font-mono">{a.event}</span>
+                                    <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                                        a.highlight
+                                            ? 'dark:bg-pallete-400/15 dark:text-pallete-400 bg-pallete2-400/15 text-pallete2-400'
+                                            : 'dark:bg-pallete-300 bg-pallete2-300 dark:text-pallete-500 text-pallete2-500'
+                                    }`}>
+                                        {a.result}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                         <div className="flex flex-wrap gap-2">
                             {['LeetCode', 'Codeforces', 'CodeChef'].map(p => (
                                 <span

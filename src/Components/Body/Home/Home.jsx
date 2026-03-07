@@ -8,6 +8,7 @@ const roles = [
     'Backend Software Engineer',
     'Node.js & NestJS Developer',
     'Microservices Architect',
+    'AI Systems Builder',
     'Problem Solver',
 ];
 
@@ -87,10 +88,12 @@ const Home = () => {
                             </div>
 
                             <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed max-w-[490px]">
-                                Passionate about crafting{' '}
-                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">robust backend systems</span>{' '}
-                                with Node.js, NestJS & PostgreSQL. I build microservices, scalable APIs, and
-                                DevOps pipelines that drive real business value.
+                                Software Engineer at{' '}
+                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>{' '}
+                                & Co-Founder of{' '}
+                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Votechx</span>.
+                                I architect microservices, build high-performance APIs, and create
+                                AI-powered backend systems using LangChain and LangGraph.
                             </p>
 
                             <div className="flex flex-wrap items-center gap-3">

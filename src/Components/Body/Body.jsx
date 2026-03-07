@@ -1,5 +1,6 @@
 import Home from "./Home/Home";
 import About from "./About/About";
+import Experience from "./Experience/Experience";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 
@@ -11,6 +12,9 @@ const Body = () => {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="experience">
+        <Experience />
       </section>
       <section id="projects">
         <Projects />
