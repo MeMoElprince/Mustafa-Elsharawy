@@ -18,9 +18,12 @@
     "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "tailwindcss build src/style.css -o public/style.css --watch"
