@@ -59,7 +59,7 @@ const Navbar = () => {
                     onClick={() => handleNav('home')}
                     className="font-bold text-xl dark:text-pallete-400 text-pallete2-400 tracking-tight hover:opacity-80 transition-opacity"
                 >
-                    MeMo
+                    M u s t a f a
                 </button>
 
                 {/* Desktop nav */}
