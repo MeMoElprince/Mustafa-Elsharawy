@@ -29,6 +29,7 @@ const projects = [
         tech: ["Node.js", "Express", "MongoDB", "PUG Templates"],
         repo: "https://github.com/MeMoElprince/My-Natours-Project",
         live: "https://natours-memo.onrender.com/",
+        liveDisabled: true,
     },
     {
         title: "CF Submissions Tracker",

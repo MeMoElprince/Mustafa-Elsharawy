@@ -89,9 +89,7 @@ const Home = () => {
 
                             <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed max-w-[490px]">
                                 Software Engineer at{' '}
-                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>{' '}
-                                & Co-Founder of{' '}
-                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Votechx</span>.
+                                <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>.
                                 I architect microservices, build high-performance APIs, and create
                                 AI-powered backend systems using LangChain and LangGraph.
                             </p>

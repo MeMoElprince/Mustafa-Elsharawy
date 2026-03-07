@@ -15,15 +15,15 @@ const experiences = [
         ],
     },
     {
-        role: 'Co-Founder & Software Engineer',
-        type: 'Co-Founder',
+        role: 'Engineering Lead',
+        type: 'Contract',
         company: 'Votechx',
         period: 'Feb 2024 – Oct 2025',
         current: false,
         bullets: [
-            'Co-founded a software company delivering custom backend systems, APIs, and infrastructure for client projects.',
-            'Managed full DevOps stack: VPS deployments, Docker containers, CI/CD pipelines.',
-            'Led architecture planning, code reviews, and development standards across all delivered projects.',
+            'Led backend development and delivered custom systems, APIs, and infrastructure for client projects.',
+            'Managed DevOps stack: VPS deployments, Docker containers, and CI/CD pipelines.',
+            'Drove architecture decisions, code reviews, and development standards across the team.',
         ],
     },
     {

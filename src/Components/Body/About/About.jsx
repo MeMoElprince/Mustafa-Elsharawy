@@ -97,9 +97,7 @@ const About = () => {
                         <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed">
                             I'm a backend engineer with production experience across multiple companies — currently building
                             scalable systems at{' '}
-                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>{' '}
-                            and co-founding{' '}
-                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Votechx</span>.
+                            <span className="dark:text-pallete-500 text-pallete2-500 font-semibold">Projecx</span>.
                             I thrive at the intersection of clean code, distributed architecture, and real-world product impact.
                         </p>
                         <p className="dark:text-pallete-600 text-pallete2-600 text-base leading-relaxed">
@@ -127,7 +125,6 @@ const About = () => {
                     >
                         {[
                             { label: "Currently", value: "Software Engineer @ Projecx" },
-                            { label: "Also", value: "Co-Founder @ Votechx" },
                             { label: "Primary Stack", value: "Node.js · NestJS · PostgreSQL" },
                             { label: "Architecture", value: "Microservices · REST · Event-Driven" },
                             { label: "Education", value: "B.Sc. Computer Science — GPA 3.42/4.00" },

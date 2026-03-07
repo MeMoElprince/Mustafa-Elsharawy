@@ -58,7 +58,7 @@ const Contact = () => {
                     <div className="flex items-center gap-3 mb-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
                         <span className="text-sm font-semibold dark:text-pallete-500 text-pallete2-500">
-                            Software Engineer @ Projecx · Co-Founder @ Votechx
+                            Software Engineer @ Projecx
                         </span>
                     </div>
                     <p className="text-sm dark:text-pallete-600 text-pallete2-600 leading-relaxed">
