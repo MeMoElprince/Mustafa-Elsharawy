@@ -1,25 +1,31 @@
 import Navbar from './Navbar/Navbar';
 import Body from './Body/Body';
-import {useState} from 'react';
+import Footer from './Navbar/Footer';
+import { useState, useEffect } from 'react';
 import { createContext } from 'react';
 
-export const contextColor = createContext({color: '#CCD0CF', setColor: ()=>{}});
-export const contextDark = createContext({darkMode: false, setDarkMode: ()=>{}});
-const Root = () => {
-    
-    const [color, setColor] = useState('#CCD0CF');
-    const [darkMode, setDarkMode] = useState(false);
+export const contextColor = createContext({ color: '#F6B17A', setColor: () => {} });
+export const contextDark = createContext({ darkMode: true, setDarkMode: () => {} });
 
-    return ( 
-        <contextColor.Provider value={{color, setColor}}>
-            <contextDark.Provider value={{darkMode, setDarkMode}} >
-                <div className="h-screen dark:text-pallete-300 lg:grid lg:grid-cols-5">
+const Root = () => {
+    const [color, setColor] = useState('#F6B17A');
+    const [darkMode, setDarkMode] = useState(true);
+
+    useEffect(() => {
+        document.getElementById('Application').classList.add('dark');
+    }, []);
+
+    return (
+        <contextColor.Provider value={{ color, setColor }}>
+            <contextDark.Provider value={{ darkMode, setDarkMode }}>
+                <div className="flex flex-col min-h-screen dark:bg-pallete-100 bg-pallete2-100 dark:text-pallete-500 text-pallete2-500">
                     <Navbar />
                     <Body />
+                    <Footer />
                 </div>
             </contextDark.Provider>
         </contextColor.Provider>
-     );
+    );
 }
 
 export default Root;

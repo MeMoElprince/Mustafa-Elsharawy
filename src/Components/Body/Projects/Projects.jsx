@@ -1,38 +1,67 @@
 import ProjectCard from "./ProjectCard";
-
-import selenium from '../../../Imgs/selenium.png'
-import natours from '../../../Imgs/Natours.png'
-import ramadan from '../../../Imgs/ramadan.png'
-import pokingapp from '../../../Imgs/pokingapp.png'
-
+import selenium from '../../../Imgs/selenium.png';
+import natours from '../../../Imgs/Natours.png';
+import ramadan from '../../../Imgs/ramadan.png';
+import pokingapp from '../../../Imgs/pokingapp.png';
 import { useEffect } from "react";
 
-const Projects = ({prev}) => {
+const projects = [
+    {
+        title: "Poking App",
+        description: "A peer-to-peer chat app emphasizing secure messaging. With strong authorization and authentication, it ensures privacy. Designed for efficiency, it offers direct one-on-one chatting.",
+        img: pokingapp,
+        tech: ["Node.js", "Express.js", "MongoDB", "Socket.IO"],
+        repo: "https://github.com/MeMoElprince/poking-app",
+        live: "https://pokingapp.vercel.app/",
+    },
+    {
+        title: "Ramadan Points",
+        description: "A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan.",
+        img: ramadan,
+        tech: ["Node.js", "Express.js", "MongoDB", "React", "Tailwind"],
+        repo: "https://github.com/MeMoElprince/ramadan-points",
+        live: "https://ramadanpoints.vercel.app/",
+    },
+    {
+        title: "Natours",
+        description: "A full-stack project for a fictional tour booking company. A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens.",
+        img: natours,
+        tech: ["Node.js", "Express", "MongoDB", "PUG Templates"],
+        repo: "https://github.com/MeMoElprince/My-Natours-Project",
+        live: "https://natours-memo.onrender.com/",
+    },
+    {
+        title: "CF Submissions Tracker",
+        description: "Codeforces website script for ICPC-SuezCanal-Community: Automatically tracking trainee submissions via web scraping.",
+        img: selenium,
+        tech: ["Python", "Selenium", "Web Scraping"],
+        repo: "https://github.com/MeMoElprince/Codeforces-User-Submissions",
+    },
+];
+
+const Projects = ({ prev }) => {
     useEffect(() => {
         prev(3);
     }, []);
-    return ( 
 
-        <div className="projects flex flex-col gap-10 w-full h-full ">
-            <div className="lg:my-10 h-fit w-full  flex flex-col text-center gap-10 dark:text-pallete-500 text-pallete2-500 font-bold p-4 justify-center items-center">
-                <h1 className="text-4xl dark:text-pallete-400 text-pallete2-400 lg:text-5xl ">
-                    Projects
-                </h1>
-                <p className="text-xl lg:text-2xl max-w-300">
-                    Welcome to the Projects section, where chaos meets creativity, deadlines dance, and miracles occasionally happen. Buckle up for a rollercoaster ride through my adventures in organized chaos!
+    return (
+        <div className="max-w-6xl mx-auto px-6 py-16 w-full">
+            <div className="mb-12">
+                <h2 className="text-3xl font-bold dark:text-pallete-500 text-pallete2-500 mb-4">
+                    My <span className="dark:text-pallete-400 text-pallete2-400">Projects</span>
+                </h2>
+                <p className="dark:text-pallete-600 text-pallete2-600 text-base max-w-2xl">
+                    A collection of things I've built — from real-time chat apps and REST APIs to web scraping tools and full-stack platforms.
                 </p>
             </div>
 
-            <div className="h-fit w-full flex flex-col gap-32 justify-center items-center pb-10">
-                <ProjectCard title={"Poking App"} discreption={"A peer‐to‐peer chat app emphasizing secure messaging. With strong authorization and authentication, it ensures privacy. Designed for effi‐ciency, it offers direct one-on-one chatting."} img={pokingapp} tech={"NodeJs, ExpressJs, MongoDB, Socket.IO"} repo={"https://github.com/MeMoElprince/poking-app"} live={"https://pokingapp.vercel.app/"} />
-                <ProjectCard title={"Ramadan Points"} discreption={"Ramadan Points: A website providing Quranic resources and hosting a contest to inspire Muslims to pray and read Quran throughout Ramadan."} img={ramadan} tech={"NodeJs, ExpressJs, MongoDB, ReactJS, Tailwind"} repo={"https://github.com/MeMoElprince/ramadan-points"} live={"https://ramadanpoints.vercel.app/"} />
-                <ProjectCard title={"Natours"} discreption={"A full-stack project for a fictional tour booking company called Natours.A comprehensive RESTful API encompassing CRUD operations, user authentication, and authorization utilizing JWT tokens."} img={natours} tech={"NodeJs, Express, MongoDB, PUG template"} repo={"https://github.com/MeMoElprince/My-Natours-Project"} live={"https://natours-memo.onrender.com/"} />
-                <ProjectCard title={"Codeforces-User-Submitions"} discreption={"Codeforces Website Script for ICPC-SuezCanal-Community: Tracking Trainee Submissions"} img={selenium} tech={"Python, Selenium, Web Scrapping"} repo={"https://github.com/MeMoElprince/Codeforces-User-Submissions"} />
+            <div className="grid md:grid-cols-2 gap-6">
+                {projects.map(project => (
+                    <ProjectCard key={project.title} {...project} />
+                ))}
             </div>
         </div>
-        
-        
-     );
-}
- 
-export default Projects
+    );
+};
+
+export default Projects;
