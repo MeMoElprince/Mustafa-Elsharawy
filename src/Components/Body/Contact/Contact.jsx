@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsEnvelope } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 
 const contactLinks = [
@@ -14,6 +14,12 @@ const contactLinks = [
         label: "GitHub",
         value: "MeMoElprince",
         href: "https://github.com/MeMoElprince",
+    },
+    {
+        icon: <BsEnvelope size={22} />,
+        label: "Email",
+        value: "mostafahaz120@gmail.com",
+        href: "mailto:mostafahaz120@gmail.com",
     },
     {
         icon: <HiLocationMarker size={22} />,
@@ -68,7 +74,7 @@ const Contact = () => {
                 </motion.div>
 
                 {/* Contact links grid */}
-                <div className="grid sm:grid-cols-3 gap-4 mb-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                     {contactLinks.map((link, i) =>
                         link.href ? (
                             <motion.a
